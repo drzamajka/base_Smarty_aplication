@@ -1,0 +1,6 @@
+{
+    "name": "mirjan24/task_01",
+    "require": {
+        "smarty/smarty": "^3.1"
+    }
+}
