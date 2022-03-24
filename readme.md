@@ -1,4 +1,4 @@
-Korzystając z repozytorium załączonego do maila utwórz prostą karuzelę produktowa na wzór poniższej:
+Korzystając z repozytorium utwórz prostą karuzelę produktowa na wzór poniższej:
 
  ![](RackMultipart20210913-4-y6i1ak_html_43665c71bd07d3d6.png)
 
