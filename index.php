@@ -11,6 +11,7 @@ $smarty->assign([
 ]);
 $smarty->display('index.tpl');
 
+
 function display_price($params, $smarty, $cur = '€')
 {
     $price = $params['price'];
