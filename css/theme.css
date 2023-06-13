@@ -1,10 +1,91 @@
 
-  .slider {
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    max-width: 1200px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    margin: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    border-style: none;
+    border-bottom: 1px solid;
+    border-color: rgb(223, 223, 223);
+}
+
+  .slider-container {
     width: 100%;
-    max-width: 600px; /* Dostosuj szerokość slidera do swoich preferencji */
+    position: relative;
   }
 
   .slider-item img {
     width: 100%;
     height: auto;
   }
+
+  #prevButton {
+    left: 0.75rem;
+    float:left;
+  }
+
+  #nextButton {
+    right: 0.75rem;
+    float:right;
+  }
+
+  .slider_button {
+    position: absolute;
+    top: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: hsla(0,0%,100%,.8);
+    border: 1px solid #e3e2df;
+    transition: transform .25s ease-in-out;
+    padding: 0;
+    margin: 0;
+  }
+ 
+ img {
+     display: inline-block;
+     vertical-align: top;
+     max-width: 100%;
+ }
+ 
+ .my-slider {
+     display: flex;
+     position: relative;    
+ }
+ 
+ .slider-item {
+     padding: 1.5rem .75rem;
+     height: 100%;
+ }
+
+ .price.current-price-discount {
+    color: #e50000;
+    font-weight: 600;
+}
+
+.regular-price {
+    /* color: #666; */
+    font-size: .80938rem;
+    text-decoration: line-through;
+}
+
+.price {
+    font-weight: 600;
+}
+.price, .product-prices .regular-price {
+    font-size: 1.125rem;
+}
+ 
+ 

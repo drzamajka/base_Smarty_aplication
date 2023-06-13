@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2023-06-13 09:48:08
+/* Smarty version 3.1.39, created on 2023-06-13 11:31:23
   from 'C:\Users\rpeczek\Desktop\zadania\task_01\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_64881f38e7db71_59002268',
+  'unifunc' => 'content_6488376b8debe5_36457429',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'afee3314ec52e5c206157b36405da18ae0562828' => 
     array (
       0 => 'C:\\Users\\rpeczek\\Desktop\\zadania\\task_01\\templates\\index.tpl',
-      1 => 1686642486,
+      1 => 1686648681,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64881f38e7db71_59002268 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6488376b8debe5_36457429 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -44,31 +44,53 @@ function content_64881f38e7db71_59002268 (Smarty_Internal_Template $_smarty_tpl)
 unset($_smarty_debug);
 ?>
 
-<div class="slider">
-  <?php
+<div class="header">
+    <h1>Best Selers</h1>
+</div>
+
+
+<div class="slider-container">
+
+    <button class="slider_button" id="prevButton"><img src="images/prev.svg" alt="prev" /></button>
+    <button class="slider_button" id="nextButton"><img src="images/next.svg" alt="prev" /></button>
+    <div class="my-slider">
+        <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['products']->value, 'product');
 $_smarty_tpl->tpl_vars['product']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['product']->value) {
 $_smarty_tpl->tpl_vars['product']->do_else = false;
 ?>
-    <div class="slider-item">
-        <img src="images/p/<?php echo $_smarty_tpl->tpl_vars['product']->value['id_product'];?>
+            <div class="my-slider">
+                <div class="slider-item">
+                    <div class="card">                
+                        <img src="images/p/<?php echo $_smarty_tpl->tpl_vars['product']->value['id_product'];?>
 .jpg" alt="Profuct <?php echo $_smarty_tpl->tpl_vars['product']->value['id_product'];?>
 ">
-        <div><?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
-</div>
-        <div><p><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['displayPrice'][0], array( array('price'=>$_smarty_tpl->tpl_vars['product']->value['price']),$_smarty_tpl ) );?>
+                        <p class="card_description"><?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
 </p>
-        <?php if ((isset($_smarty_tpl->tpl_vars['product']->value['specific_price']))) {?>
-            <p><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['displayPrice'][0], array( array('price'=>$_smarty_tpl->tpl_vars['product']->value['specific_price']['priceWithoutReduction']),$_smarty_tpl ) );?>
+                        <div>
+                            
+                            <?php if ((isset($_smarty_tpl->tpl_vars['product']->value['specific_price'])) && $_smarty_tpl->tpl_vars['product']->value['specific_price'] != false) {?>
+                                <a class="price current-price-discount"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['displayPrice'][0], array( array('price'=>$_smarty_tpl->tpl_vars['product']->value['specific_price']['priceWithoutReduction']),$_smarty_tpl ) );?>
+</a> 
+                                <a class="price regular-price" ><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['displayPrice'][0], array( array('price'=>$_smarty_tpl->tpl_vars['product']->value['price']),$_smarty_tpl ) );?>
+</a>
+                                <?php } else { ?>
+                                <p class="price" ><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['displayPrice'][0], array( array('price'=>$_smarty_tpl->tpl_vars['product']->value['price']),$_smarty_tpl ) );?>
 </p>
-        <?php }?>
-        </div>
-    </div>
-  <?php
+                            <?php }?>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        <?php
 }
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?> 
+    </div>    
 </div>
+
+
+
         
 
 
@@ -85,15 +107,33 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
     <?php echo '<script'; ?>
 >
-        var slider = tns({
-            container: '.slider',
-            items: 1,
-            slideBy: 'page',
-            autoplay: false,
-            autoplayButtonOutput: false,
-            controls: true,
-            nav: false
-        });
+
+
+    var slider = tns({
+    container: '.my-slider',
+    loop: true,
+    items: 4,
+    slideBy: 'page',
+    nav: false,    
+    autoplayButtonOutput: false,
+    mouseDrag: true,
+    controls: false,
+
+
+  });
+
+  // Pobierz przyciski z DOM
+    var prevButton = document.getElementById('prevButton');
+    var nextButton = document.getElementById('nextButton');
+
+    // Dodaj obsługę kliknięcia do przycisków
+    prevButton.addEventListener('click', function() {
+    slider.goTo('prev');
+    });
+
+    nextButton.addEventListener('click', function() {
+    slider.goTo('next');
+    });
     <?php echo '</script'; ?>
 >
 </body>
