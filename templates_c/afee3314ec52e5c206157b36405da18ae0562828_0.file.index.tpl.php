@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2023-06-13 11:31:23
+/* Smarty version 3.1.39, created on 2023-06-13 12:34:28
   from 'C:\Users\rpeczek\Desktop\zadania\task_01\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6488376b8debe5_36457429',
+  'unifunc' => 'content_648846349032f6_88862229',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'afee3314ec52e5c206157b36405da18ae0562828' => 
     array (
       0 => 'C:\\Users\\rpeczek\\Desktop\\zadania\\task_01\\templates\\index.tpl',
-      1 => 1686648681,
+      1 => 1686649098,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6488376b8debe5_36457429 (Smarty_Internal_Template $_smarty_tpl) {
+function content_648846349032f6_88862229 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -69,7 +69,6 @@ $_smarty_tpl->tpl_vars['product']->do_else = false;
                         <p class="card_description"><?php echo $_smarty_tpl->tpl_vars['product']->value['name'];?>
 </p>
                         <div>
-                            
                             <?php if ((isset($_smarty_tpl->tpl_vars['product']->value['specific_price'])) && $_smarty_tpl->tpl_vars['product']->value['specific_price'] != false) {?>
                                 <a class="price current-price-discount"><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['displayPrice'][0], array( array('price'=>$_smarty_tpl->tpl_vars['product']->value['specific_price']['priceWithoutReduction']),$_smarty_tpl ) );?>
 </a> 
