@@ -1,0 +1,88 @@
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    max-width: 800px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    margin: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+body{
+    padding-top: 0px;
+    margin: 0px;
+} 
+
+.logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 15rem;
+  top: 5rem;
+}
+
+
+#loginForm{
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 469px;
+  height: 484px;
+  left: 0;
+  right: 0;
+  top: 11rem;
+  padding: 2.5rem;
+
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 3px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#loginForm h1{
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+#loginForm input{
+  border-radius: 3px;
+  margin-bottom: 2rem;
+}
+
+#loginForm .invalid-feedback {
+  margin-bottom: 2rem;
+  margin-top: -2rem;
+  height: 0rem;
+}
+
+.header {
+  border-style: none;
+  border-bottom: 1px solid;
+  border-color: rgb(223, 223, 223);
+  border-radius: 3px;
+}
+
+.login {
+  background: #E50000;
+  box-shadow: 0px 2px 15px rgba(229, 0, 0, 0.15);
+  border-radius: 3px;
+  font-weight: 500;
+  color: white;
+  width: 100%;
+  height: 3.5rem;
+  border-style: none;
+  margin-top: 1rem;
+}
+
+
+
+
+
+ 
+ 
