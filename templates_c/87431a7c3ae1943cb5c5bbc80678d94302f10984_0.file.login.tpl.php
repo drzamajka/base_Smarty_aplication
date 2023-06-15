@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2023-06-15 09:24:37
+/* Smarty version 3.1.48, created on 2023-06-15 09:58:40
   from 'C:\Users\rpeczek\Desktop\zadania\task_01\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_648abcb5b11ef6_19481289',
+  'version' => '3.1.48',
+  'unifunc' => 'content_648ac4b0281718_00932005',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_648abcb5b11ef6_19481289 (Smarty_Internal_Template $_smarty_tpl) {
+function content_648ac4b0281718_00932005 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>

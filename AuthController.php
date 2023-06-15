@@ -2,7 +2,10 @@
 
 require_once('vendor/autoload.php');
 // Załądaowania dostępu do pliku env
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+
+// Adaptacja do php 5.4.* wymagała zmiany ponizszych linijek
+//$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::create(__DIR__);
 $dotenv->load();
 
 class AuthController

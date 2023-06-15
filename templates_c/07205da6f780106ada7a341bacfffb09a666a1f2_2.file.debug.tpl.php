@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2023-06-13 08:26:45
+/* Smarty version 3.1.48, created on 2023-06-15 10:22:05
   from 'C:\Users\rpeczek\Desktop\zadania\task_01\vendor\smarty\smarty\libs\debug.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.39',
-  'unifunc' => 'content_64880c258935d2_66024138',
+  'version' => '3.1.48',
+  'unifunc' => 'content_648aca2d11f2b0_87073297',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '07205da6f780106ada7a341bacfffb09a666a1f2' => 
     array (
       0 => 'C:\\Users\\rpeczek\\Desktop\\zadania\\task_01\\vendor\\smarty\\smarty\\libs\\debug.tpl',
-      1 => 1613599071,
+      1 => 1680032754,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64880c258935d2_66024138 (Smarty_Internal_Template $_smarty_tpl) {
+function content_648aca2d11f2b0_87073297 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\rpeczek\\Desktop\\zadania\\task_01\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.debug_print_var.php','function'=>'smarty_modifier_debug_print_var',),));
 $_smarty_tpl->smarty->ext->_capture->open($_smarty_tpl, '_smarty_debug', 'debug_output', null);?>
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -171,7 +171,7 @@ $_smarty_tpl->tpl_vars['vars']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['vars']->key => $_smarty_tpl->tpl_vars['vars']->value) {
 $_smarty_tpl->tpl_vars['vars']->do_else = false;
 $_smarty_tpl->tpl_vars['vars']->iteration++;
-$__foreach_vars_1_saved = $_smarty_tpl->tpl_vars['vars'];
+$__foreach_vars_2_saved = $_smarty_tpl->tpl_vars['vars'];
 ?>
             <tr class="<?php if ($_smarty_tpl->tpl_vars['vars']->iteration%2 == 0) {?>odd<?php } else { ?>even<?php }?>">
                 <td><h3><font color=blue>$<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['vars']->key, ENT_QUOTES, 'UTF-8');?>
@@ -185,7 +185,7 @@ $__foreach_vars_1_saved = $_smarty_tpl->tpl_vars['vars'];
                 <td><?php if ((isset($_smarty_tpl->tpl_vars['vars']->value['attributes']))) {?><h3>Attributes</h3><?php echo smarty_modifier_debug_print_var($_smarty_tpl->tpl_vars['vars']->value['attributes']);?>
  <?php }?></td>
          <?php
-$_smarty_tpl->tpl_vars['vars'] = $__foreach_vars_1_saved;
+$_smarty_tpl->tpl_vars['vars'] = $__foreach_vars_2_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </table>
@@ -200,7 +200,7 @@ $_smarty_tpl->tpl_vars['vars']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['vars']->key => $_smarty_tpl->tpl_vars['vars']->value) {
 $_smarty_tpl->tpl_vars['vars']->do_else = false;
 $_smarty_tpl->tpl_vars['vars']->iteration++;
-$__foreach_vars_2_saved = $_smarty_tpl->tpl_vars['vars'];
+$__foreach_vars_3_saved = $_smarty_tpl->tpl_vars['vars'];
 ?>
             <tr class="<?php if ($_smarty_tpl->tpl_vars['vars']->iteration%2 == 0) {?>odd<?php } else { ?>even<?php }?>">
                 <td><h3><font color=blue>#<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['vars']->key, ENT_QUOTES, 'UTF-8');?>
@@ -212,7 +212,7 @@ $__foreach_vars_2_saved = $_smarty_tpl->tpl_vars['vars'];
 </td>
             </tr>
         <?php
-$_smarty_tpl->tpl_vars['vars'] = $__foreach_vars_2_saved;
+$_smarty_tpl->tpl_vars['vars'] = $__foreach_vars_3_saved;
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
@@ -230,7 +230,9 @@ $_smarty_tpl->_assignInScope('id', md5(((string)$_smarty_tpl->tpl_vars['offset']
 ", "width=1024,height=600,left=<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['offset']->value, ENT_QUOTES, 'UTF-8');?>
 ,top=<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['offset']->value, ENT_QUOTES, 'UTF-8');?>
 ,resizable,scrollbars=yes");
-    _smarty_console.document.write("<?php echo strtr($_smarty_tpl->tpl_vars['debug_output']->value, array("\\" => "\\\\", "'" => "\\'", "\"" => "\\\"", "\r" => "\\r", "\n" => "\\n", "</" => "<\/" ));?>
+    _smarty_console.document.write("<?php echo strtr($_smarty_tpl->tpl_vars['debug_output']->value, array("\\" => "\\\\", "'" => "\\'", "\"" => "\\\"", "\r" => "\\r", 
+                       "\n" => "\\n", "</" => "<\/", "<!--" => "<\!--", "<s" => "<\s", "<S" => "<\S",
+                       "`" => "\\`", "\${" => "\\\$\{"));?>
 ");
     _smarty_console.document.close();
 <?php echo '</script'; ?>
