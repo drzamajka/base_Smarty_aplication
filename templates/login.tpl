@@ -24,12 +24,12 @@
         <form id="loginForm" method="post" class="needs-validation" novalidate>
             <h1>Panel logowania</h1>
 
-            <div class="mb-3">
+            <div class="form-outline">
                 <label for="login" class="form-label">E-mail:</label>
                 <input type="text" id="login" name="login" class="form-control" required>
                 <div class="invalid-feedback">Pole E-mail jest wymagane.</div>
             </div>
-            <div class="mb-3">
+            <div cclass="form-outline">
                 <label for="password" class="form-label">Hasło:</label>
                 <input type="password" id="password" name="password" class="form-control" required>
                 <div class="invalid-feedback">Pole hasło jest wymagane.</div>
@@ -47,8 +47,7 @@
 
     <script>
 
- (function() {
-        'use strict';
+    (function() {
 
         // Walidacja formularza przy użyciu Bootstrapa
         var forms = document.querySelectorAll('.needs-validation');

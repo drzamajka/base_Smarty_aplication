@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2023-06-13 15:00:17
+/* Smarty version 3.1.39, created on 2023-06-15 09:24:37
   from 'C:\Users\rpeczek\Desktop\zadania\task_01\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6488686179a5e8_75859502',
+  'unifunc' => 'content_648abcb5b11ef6_19481289',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '87431a7c3ae1943cb5c5bbc80678d94302f10984' => 
     array (
       0 => 'C:\\Users\\rpeczek\\Desktop\\zadania\\task_01\\templates\\login.tpl',
-      1 => 1686661214,
+      1 => 1686813874,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6488686179a5e8_75859502 (Smarty_Internal_Template $_smarty_tpl) {
+function content_648abcb5b11ef6_19481289 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -49,12 +49,12 @@ function content_6488686179a5e8_75859502 (Smarty_Internal_Template $_smarty_tpl)
         <form id="loginForm" method="post" class="needs-validation" novalidate>
             <h1>Panel logowania</h1>
 
-            <div class="mb-3">
+            <div class="form-outline">
                 <label for="login" class="form-label">E-mail:</label>
                 <input type="text" id="login" name="login" class="form-control" required>
                 <div class="invalid-feedback">Pole E-mail jest wymagane.</div>
             </div>
-            <div class="mb-3">
+            <div cclass="form-outline">
                 <label for="password" class="form-label">Hasło:</label>
                 <input type="password" id="password" name="password" class="form-control" required>
                 <div class="invalid-feedback">Pole hasło jest wymagane.</div>
@@ -81,8 +81,7 @@ function content_6488686179a5e8_75859502 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
 >
 
- (function() {
-        'use strict';
+    (function() {
 
         // Walidacja formularza przy użyciu Bootstrapa
         var forms = document.querySelectorAll('.needs-validation');
